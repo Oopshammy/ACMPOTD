@@ -1,3 +1,10 @@
+'''
+The approach I used here was first checking whether all the elements in a row are same or not by checking with the first element of each row.
+then to check whether the adjacent columns are different or not i checked for each column whether it was same or different to the one below it. 
+from this method all the columns' adjency was cecked.
+'''
+
+
 n, m = map(int, input().split())
 
 matrix = []
