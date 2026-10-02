@@ -1,2 +1,0 @@
-# ACMPOTD
-Shaambhvi Maheshwari
