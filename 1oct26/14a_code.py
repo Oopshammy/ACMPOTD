@@ -1,3 +1,10 @@
+'''
+the approach i used was first copying the pattern in a 2d matrix,
+and then starting to delete the rows from the beginning which had no stars in them till i reached a row with stars.
+then deleting the rows from the end with no stars and stopping once i reached a row with stars. 
+doing the same for columns too
+'''
+
 n, m = map(int, input().split())
 
 matrix = []
