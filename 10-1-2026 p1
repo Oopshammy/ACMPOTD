@@ -1,0 +1,38 @@
+## Problem link
+https://codeforces.com/problemset/problem/14/A
+
+## Description
+the approach I used was taking the pattern and inputting it in a 2d matrix and then deleting the rows from the star which had no stars and stopping when i found a row which has stars and then deleting the rows from the end which had no stars and stopping once I reached a row which stars. Then doing the same for columns.
+
+## Code
+```python
+n, m = map(int, input().split())
+
+matrix = []
+
+for i in range(n):
+    row = input()
+    matrix.append(list(row))
+
+
+while len(matrix) > 0 and '*' not in matrix[0]:
+    matrix.pop(0)
+
+
+while len(matrix) > 0 and '*' not in matrix[-1]:
+    matrix.pop()
+
+
+while len(matrix[0]) > 0 and all(row[0] == '.' for row in matrix):
+    for row in matrix:
+        row.pop(0)
+
+
+while len(matrix[0]) > 0 and all(row[-1] == '.' for row in matrix):
+    for row in matrix:
+        row.pop()
+
+
+for row in matrix:
+    print(''.join(row))
+```
